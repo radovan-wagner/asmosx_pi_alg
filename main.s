@@ -9,6 +9,14 @@
 str:
                 .asciz  "Hello World!\n"
 
+operand1:
+                .short  10
+
+operand2:
+                .short  20
+
+vysledok:       .long   0
+
 .section        __TEXT,__text
 
 .globl          _main
