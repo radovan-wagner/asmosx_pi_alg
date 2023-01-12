@@ -10,12 +10,12 @@ str:
                 .asciz  "Hello World!\n"
 
 operand1:
-                .short  10
+                .short  0x10
 
 operand2:
-                .short  20
+                .short  0x20
 
-vysledok:       .long   0
+vysledok:       .long   0x0
 
 .section        __TEXT,__text
 
@@ -23,7 +23,8 @@ vysledok:       .long   0
 
 _main:
 
-                movb    $0x00000123, %ecx
+ //               lea     operand1, %eax
+                movb    (%eax), %ecx
                 movl    $0x02000004, %eax
                 movl    $1, %edi
                 movq    str@GOTPCREL(%rip), %rsi
