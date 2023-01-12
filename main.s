@@ -23,7 +23,7 @@ vysledok:       .long   0
 
 _main:
 
-                movb    $(operand1), %ecx
+                movb    $0x00000123, %ecx
                 movl    $0x02000004, %eax
                 movl    $1, %edi
                 movq    str@GOTPCREL(%rip), %rsi
