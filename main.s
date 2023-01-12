@@ -22,6 +22,8 @@ vysledok:       .long   0
 .globl          _main
 
 _main:
+
+                movb    $(operand1), %ecx
                 movl    $0x02000004, %eax
                 movl    $1, %edi
                 movq    str@GOTPCREL(%rip), %rsi
